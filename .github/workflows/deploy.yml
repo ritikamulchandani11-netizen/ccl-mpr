@@ -42,7 +42,7 @@ jobs:
           context: .
           push: true
           platforms: linux/arm64/v8
-          tags: ivesfurtado/mlops-fastapi-microservice:latest
+          tags: ritikam05/mlops-fastapi-microservice:latest
 
       - name: Deploy to EC2
         run: |
@@ -50,9 +50,9 @@ jobs:
           chmod 600 key.pem
 
           ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@${{ secrets.EC2_IP }} "
-            docker pull ivesfurtado/mlops-fastapi-microservice:latest
+            docker pull ritikam05/mlops-fastapi-microservice:latest
             docker rm -f mlops-fastapi || true
-            docker run -d -p 80:8000 --name mlops-fastapi ivesfurtado/mlops-fastapi-microservice:latest
+            docker run -d -p 80:8000 --name mlops-fastapi ritikam05/mlops-fastapi-microservice:latest
           "
 
           rm key.pem
