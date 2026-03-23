@@ -1,3 +1,5 @@
+hello
+
 # FastAPI MLOps Project
 
 This repository showcases how to integrate **FastAPI**, **Docker**, and **Poetry** to build a production-ready Machine Learning Operations (MLOps) project. The project is designed to deploy machine learning models via a FastAPI microservice and automate the deployment process using GitHub Actions for a seamless CI/CD pipeline, deploying the containerized app to AWS EC2.
